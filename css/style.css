@@ -1,0 +1,184 @@
+/* === GENERALES === */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* === HEADER === */
+header {
+    background-color: #0d47a1; /* Azul AutoElite */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* === NAV === */
+nav {
+    background-color: #1565c0;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+nav ul li a:hover {
+    background-color: #ff6f00; /* Naranja hover */
+    border-radius: 5px;
+}
+
+/* === MAIN === */
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    color: #0d47a1;
+    border-bottom: 3px solid #ff6f00;
+    padding-bottom: 10px;
+}
+
+/* === BENEFICIOS - usando inline-block === */
+#beneficios article {
+    display: inline-block;
+    width: 22%;
+    margin: 1%;
+    padding: 15px;
+    background-color: #e3f2fd;
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 8px;
+}
+
+#beneficios article h3 {
+    color: #1565c0;
+}
+
+/* === SERVICIOS === */
+article {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+details {
+    margin-top: 10px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #ff6f00;
+}
+
+/* === GALERIA === */
+figure {
+    display: inline-block;
+    width: 45%;
+    margin: 2%;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+/* === FORMULARIO === */
+form {
+    background-color: #e8eaf6;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #ff6f00;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #e65100;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer div {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 10px;
+}
+
+footer h3, footer h4 {
+    color: #ff6f00;
+}
