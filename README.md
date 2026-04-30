@@ -14,7 +14,6 @@ Sitio web para AutoElite, taller automotriz. Permite mostrar servicios y que cli
 2. Dante
 3. Guillermo
 4. Adriana
-5. Yoel
 
 ## Enlaces
 - **Web**: https://dntsk96.github.io/GrupoSala5_EV1
