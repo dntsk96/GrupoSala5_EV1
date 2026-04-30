@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios - AutoElite</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>AutoElite</h1>
+        <p>Tu taller de confianza</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Lista de Precios Actualizada</h2>
+            <p>Usa el buscador para filtrar servicios. Todos los precios incluyen IGV.</p>
+
+            <input type="text" id="buscador" placeholder="Buscar servicio..."
+                   style="padding:8px; width:300px; margin-bottom:15px; border:1px solid #ccc;">
+
+            <table border="1" style="width:100%; border-collapse:collapse;">
+                <thead style="background:#0d47a1; color:white;">
+                    <tr>
+                        <th style="padding:10px;">Servicio</th>
+                        <th style="padding:10px;">Descripción</th>
+                        <th style="padding:10px;">Precio</th>
+                        <th style="padding:10px;">Tiempo Aprox.</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaPrecios">
+                    <!-- El JavaScript inserta las filas aquí -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AutoElite - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/tabla-precios.js"></script>
+</body>
+</html>

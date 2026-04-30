@@ -22,45 +22,27 @@
 
     <main>
         <section>
-            <h2>Nuestros Servicios Automotrices</h2>
-            <p>Soluciones completas para el cuidado de tu vehículo</p>
-            
-            <article>
-                <h3>Mantenimiento Preventivo</h3>
-                <p>Cambio de aceite, filtros de aire y combustible, revisión de niveles. Mantén tu auto en óptimas condiciones.</p>
-                <details>
-                    <summary>Ver más detalles</summary>
-                    <p>Incluye: Inspección de 25 puntos, rotación de llantas, revisión de frenos.</p>
-                </details>
-            </article>
+            <h2>Cotiza tu servicio al instante</h2>
 
-            <article>
-                <h3>Reparación de Motor</h3>
-                <p>Diagnóstico computarizado y reparación completa. Solucionamos problemas de potencia, consumo y ruidos.</p>
-                <details>
-                    <summary>Ver más detalles</summary>
-                    <p>Reparamos: Culata, pistones, sistema de distribución, empaques.</p>
-                </details>
-            </article>
+            <div id="cotizador">
+                <h3>Selecciona los servicios:</h3>
 
-            <article>
-                <h3>Sistema Eléctrico</h3>
-                <p>Baterías, alternadores, arrancadores y sistema de luces. Detectamos fallas eléctricas complejas.</p>
-                <details>
-                    <summary>Ver más detalles</summary>
-                    <p>Incluye: Escaneo de computadora, reparación de cableado, instalación de alarmas.</p>
-                </details>
-            </article>
+                    <label><input type="checkbox" class="servicio" data-precio="80"> Mantenimiento Preventivo - S/ 80</label><br>
+                    <label><input type="checkbox" class="servicio" data-precio="350"> Reparación de Motor - Desde S/ 350</label><br>
+                    <label><input type="checkbox" class="servicio" data-precio="120"> Sistema Eléctrico - S/ 120</label><br>
+                    <label><input type="checkbox" class="servicio" data-precio="150"> Sistema de Frenos - S/ 150</label><br>
+                    <label><input type="checkbox" class="servicio" data-precio="60"> Cambio de Aceite - S/ 60</label><br><br>
 
-            <article>
-                <h3>Sistema de Frenos</h3>
-                <p>Cambio de pastillas, discos, líquido de frenos y ABS. Tu seguridad es primero.</p>
-                <details>
-                    <summary>Ver más detalles</summary>
-                    <p>Revisamos: Discos, tambores, bombas, líneas hidráulicas.</p>
-                </details>
-            </article>
-        </section>
+                    <button id="btnCalcular">Calcular Total</button>
+                    <button id="btnLimpiar">Limpiar</button>
+
+                    <div id="resultado" style="margin-top:20px; padding:15px; background:#e3f2fd; display:none;">
+                        <h4>Resumen de Cotización:</h4>
+                            <div id="detalleServicios"></div>
+                            <h3 id="totalPagar"></h3>
+                            </div>
+                    </div>
+        </section> 
     </main>
 
     <footer>
@@ -78,5 +60,6 @@
             <p>&copy; 2026 AutoElite - Grupo Sala 5 AA1</p>
         </div>
     </footer>
+<script src="js/cotizador.js"></script>    
 </body>
 </html>
