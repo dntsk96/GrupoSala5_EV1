@@ -1,4 +1,4 @@
-// Array de objetos - Semana 6: Manipula objetos
+// AA3 - Array de objetos con servicios
 var servicios = [
     {nombre: "Mantenimiento Preventivo", desc: "Revisión 20 puntos + fluidos", precio: 80, tiempo: "2 horas"},
     {nombre: "Reparación de Motor", desc: "Diagnóstico computarizado y reparación", precio: 350, tiempo: "1-3 días"},
@@ -9,43 +9,37 @@ var servicios = [
     {nombre: "Diagnóstico Scanner", desc: "Lectura de códigos de falla", precio: 50, tiempo: "45 min"}
 ];
 
-// Función para generar tabla - Rúbrica: Funciones
+// Función que dibuja la tabla - Rúbrica: DOM + bucles
 function generarTabla(lista) {
     var tbody = document.getElementById('tablaPrecios');
-    tbody.innerHTML = ""; // Limpia tabla
+    tbody.innerHTML = "";
 
-    // Bucle FOR - Rúbrica: Diseña bucles
     for (var i = 0; i < lista.length; i++) {
-        var fila = document.createElement('tr'); // createElement - Semana 5
-
-        // Operadores y concatenación de strings
-        fila.innerHTML = "<td style='padding:8px;'>" + lista[i].nombre + "</td>" +
-                         "<td style='padding:8px;'>" + lista[i].desc + "</td>" +
-                         "<td style='padding:8px;'>S/ " + lista[i].precio + "</td>" +
-                         "<td style='padding:8px;'>" + lista[i].tiempo + "</td>";
-
-        tbody.appendChild(fila); // appendChild - Manipula DOM
+        var fila = document.createElement('tr');
+        fila.innerHTML = "<td style='padding:8px; border: 1px solid #ddd;'>" + lista[i].nombre + "</td>" +
+                         "<td style='padding:8px; border: 1px solid #ddd;'>" + lista[i].desc + "</td>" +
+                         "<td style='padding:8px; border: 1px solid #ddd;'>S/ " + lista[i].precio + "</td>" +
+                         "<td style='padding:8px; border: 1px solid #ddd;'>" + lista[i].tiempo + "</td>";
+        tbody.appendChild(fila);
     }
 }
 
-// Función de búsqueda - Condicionales + lógica
+// Función de búsqueda - Rúbrica: Condicionales + operadores lógicos
 function buscarServicio() {
     var texto = document.getElementById('buscador').value.toLowerCase();
     var filtrados = [];
 
-    // Bucle + condicional + operador lógico ||
     for (var i = 0; i < servicios.length; i++) {
         if (servicios[i].nombre.toLowerCase().indexOf(texto)!= -1 ||
             servicios[i].desc.toLowerCase().indexOf(texto)!= -1) {
-            filtrados.push(servicios[i]); // Método de array
+            filtrados.push(servicios[i]);
         }
+    }
     generarTabla(filtrados);
 }
 
-// Evento al cargar página
+// Evento principal - Espera a que cargue todo el HTML
 window.addEventListener('load', function() {
-    generarTabla(servicios); // Carga tabla inicial
+    generarTabla(servicios);
+    document.getElementById('buscador').addEventListener('keyup', buscarServicio);
 });
-
-// Evento en buscador
-document.getElementById('buscador').addEventListener('keyup', buscarServicio);

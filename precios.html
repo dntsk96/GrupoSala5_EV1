@@ -24,33 +24,29 @@
         </nav>
 
     <main>
-        <section>
-            <h2>Lista de Precios Actualizada</h2>
-            <p>Usa el buscador para filtrar servicios. Todos los precios incluyen IGV.</p>
+    <section>
+        <h2>Lista de Precios Actualizada</h2>
+        <p>Usa el buscador para filtrar servicios. Todos los precios incluyen IGV.</p>
 
-            <input type="text" id="buscador" placeholder="Buscar servicio..."
-                   style="padding:8px; width:300px; margin-bottom:15px; border:1px solid #ccc;">
+        <input type="text" id="buscador" placeholder="Buscar servicio..." style="width:100%; padding:10px; margin:15px 0; border:1px solid #ccc;">
 
-            <table border="1" style="width:100%; border-collapse:collapse;">
-                <thead style="background:#0d47a1; color:white;">
-                    <tr>
-                        <th style="padding:10px;">Servicio</th>
-                        <th style="padding:10px;">Descripción</th>
-                        <th style="padding:10px;">Precio</th>
-                        <th style="padding:10px;">Tiempo Aprox.</th>
-                    </tr>
-                </thead>
-                <tbody id="tablaPrecios">
-                    <!-- El JavaScript inserta las filas aquí -->
-                </tbody>
-            </table>
-        </section>
-    </main>
+        <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+            <thead style="background:#1e3a8a; color:white;">
+                <tr>
+                    <th style="padding:12px; border: 1px solid #1e3a8a;">Servicio</th>
+                    <th style="padding:12px; border: 1px solid #1e3a8a;">Descripción</th>
+                    <th style="padding:12px; border: 1px solid #1e3a8a;">Precio</th>
+                    <th style="padding:12px; border: 1px solid #1e3a8a;">Tiempo Aprox.</th>
+                </tr>
+            </thead>
+            <tbody id="tablaPrecios">
+                <!-- JavaScript inserta las filas aquí -->
+            </tbody>
+        </table>
+    </section>
+</main>
 
-    <footer>
-        <p>&copy; 2026 AutoElite - Todos los derechos reservados</p>
-    </footer>
-
-    <script src="js/tabla-precios.js"></script>
+<!-- El script DEBE ir al final, antes de </body> -->
+<script src="js/tabla-precios.js"></script>
 </body>
 </html>
