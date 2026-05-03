@@ -1,52 +1,529 @@
 <!DOCTYPE html>
 <html lang="es">
-    <link rel="stylesheet" href="css/style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoElite - Taller Automotriz</title>
+    <title>AutoElite</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Esta línea es la importante -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>AutoElite</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="precios.html">Precios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+<header class="header">
+    <div class="header__container">
+        <div class="logo-wrapper">
+            <a href="/" class="logo">
+                <img src="/assets/img/logo1.png" alt="AutoElite" height="38">
+            </a>
+            <p class="tagline">Tu Centro Integral de Cuidado y Optimización Automotriz</p>
+        </div>
+
+        <nav class="nav">
+            <ul class="nav__list">
+    <li><a href="#inicio" class="nav__link">Inicio</a></li>
+    <li><a href="servicios.html" class="nav__link">Servicios</a></li>
+    <li><a href="#galeria" class="nav__link">Galería</a></li>
+    <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+    <li><a href="catalogo.html" class="nav__link">Catálogo</a></li>
+    <li><a href="#contacto" class="nav__link">Contacto</a></li>
+</ul>
         </nav>
-    </header>
 
-    <main>
-        <section id="hero">
-            <h2>Servicio de Calidad para tu Vehículo</h2>
-            <p>Confía en nuestros expertos para el cuidado de tu auto</p>
-            <a href="contacto.html">Pedir Cita</a>
-        </section>
+        <div class="header__actions" id="header-actions">
+            <a href="registro.html" class="btn-registro">Registro</a>
+            <a href="#contacto" class="btn-cita">Pedir Cita Online</a>
+        </div>
+    </div>
+</header>
 
-        <section id="beneficios">
-            <h2>Por Qué Elegirnos</h2>
-            <!-- Integrante 2: agregar 4 beneficios aquí -->
-        </section>
-    </main>
+    
+<main>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Transforma tu Conducción:<br>Mantenimiento, Reparaciones y<br>Mejoras de Rendimiento.</h1>
+            <p>En AutoElite, nos dedicamos a mantener tu vehículo en óptimas condiciones y llevar su rendimiento al siguiente nivel. Experiencia, calidad y pasión automotriz en un solo lugar.</p>
+            <div class="hero-botones">
+                <a href="#servicios" class="btn-rojo">Explorar Servicios</a>
+                <a href="#contacto" class="btn-secundario">Pedir Cita</a>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <div>
-            <h3>AutoElite</h3>
-            <p>Servicio automotriz desde hace 15 años</p>
+    <!-- SECCIÓN NUESTROS SERVICIOS -->
+    <section id="servicios" class="servicios">
+        <div class="servicios__container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Soluciones completas para el cuidado y rendimiento de tu vehículo</p>
+            
+            <div class="servicios__grid">
+                <!-- Card 1: Mantenimiento -->
+                <div class="servicio-card">
+                    <div class="servicio-card__img">
+                        <img src="/assets/img/servicio-mantenimiento.jpg" alt="Mantenimiento Preventivo">
+                    </div>
+                    <div class="servicio-card__content">
+                        <h3>Mantenimiento Preventivo</h3>
+                        <p>Cuidamos tu motor para un rendimiento óptimo y duradero.</p>
+                        <a href="#contacto" class="servicio-link">Agendar Servicio <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Reparaciones -->
+                <div class="servicio-card">
+                    <div class="servicio-card__img">
+                        <img src="/assets/img/servicio-reparacion.jpg" alt="Reparaciones Especializadas">
+                    </div>
+                    <div class="servicio-card__content">
+                        <h3>Reparaciones Especializadas</h3>
+                        <p>Solucionamos fallas complejas con precisión y garantía.</p>
+                        <a href="#contacto" class="servicio-link">Agendar Servicio <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Diagnóstico -->
+                <div class="servicio-card">
+                    <div class="servicio-card__img">
+                        <img src="/assets/img/servicio-diagnostico.jpg" alt="Diagnóstico Avanzado">
+                    </div>
+                    <div class="servicio-card__content">
+                        <h3>Diagnóstico Avanzado</h3>
+                        <p>Detectamos problemas con tecnología de punta.</p>
+                        <a href="#contacto" class="servicio-link">Agendar Servicio <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Detailing -->
+                <div class="servicio-card">
+                    <div class="servicio-card__img">
+                        <img src="/assets/img/servicio-detailing.jpg" alt="Detailing Profesional">
+                    </div>
+                    <div class="servicio-card__content">
+                        <h3>Detailing Profesional</h3>
+                        <p>Devolvemos el brillo y protección a tu vehículo.</p>
+                        <a href="#contacto" class="servicio-link">Agendar Servicio <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <h4>Contacto</h4>
-            <p>Tel: 001-122-3344</p>
-            <p>Email: contacto@autoelite.com</p>
+    </section>
+
+    <!-- SECCIÓN POR QUÉ ELEGIRNOS -->
+    <section id="beneficios" class="beneficios">
+        <div class="beneficios__container">
+            <h2 class="section-title">Por Qué Elegirnos</h2>
+            <p class="section-subtitle">Ventajas que nos distinguen como tu mejor opción en servicio automotriz</p>
+            
+            <div class="beneficios__grid">
+                <!-- 1. Técnicos Certificados -->
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3>Técnicos Certificados</h3>
+                    <p>Profesionales con certificaciones internacionales y años de experiencia.</p>
+                </div>
+
+                <!-- 2. Garantía de Calidad -->
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Garantía de Calidad</h3>
+                    <p>Todos nuestros servicios cuentan con garantía y respaldo total.</p>
+                </div>
+
+                <!-- 3. Tecnología Avanzada -->
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3>Tecnología Avanzada</h3>
+                    <p>Equipos de diagnóstico y reparación de última generación.</p>
+                </div>
+
+                <!-- 4. Atención Personalizada -->
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Cada cliente y vehículo recibe un tratamiento único y especializado.</p>
+                </div>
+
+                <!-- 5. Precios Transparentes -->
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                    <h3>Precios Transparentes</h3>
+                    <p>Sin costos ocultos, presupuestos claros y honestos desde el inicio.</p>
+                </div>
+
+                <!-- 6. Servicio Integral -->
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <h3>Servicio Integral</h3>
+                    <p>Desde mantenimiento básico hasta tuning avanzado, todo en un solo lugar.</p>
+                </div>
+            </div>
         </div>
-        <div>
-            <p>&copy; 2026 AutoElite - Grupo Sala 5 AA1</p>
+    </section>
+    <!-- SECCIÓN GALERÍA DE PROYECTOS -->
+<section id="galeria" class="galeria">
+    <div class="galeria__container">
+        <h2 class="section-title">Galería de Proyectos Destacados</h2>
+        <p class="section-subtitle">Descubre nuestros trabajos de tuning, reparaciones complejas y modificaciones de alto rendimiento</p>
+        
+        <!-- Tabs de categorías -->
+        <div class="galeria-tabs">
+            <button class="tab-btn active" data-tab="tuning">Tuning & Performance</button>
+            <button class="tab-btn" data-tab="restauracion">Restauración Clásica</button>
+            <button class="tab-btn" data-tab="reparacion">Reparaciones Complejas</button>
         </div>
-    </footer>
+
+        <!-- Slider Tuning -->
+<div class="galeria-slider active" id="tuning">
+    <div class="slider-wrapper">
+        
+        <div class="proyecto-card">
+            <img src="/assets/img/proyecto-tuning1.jpg" alt="Tuning 1">
+            <div class="proyecto-overlay">
+                <h3>Stage 2 ECU Tune</h3>
+                <p>Reprogramación + 85HP extra en Audi RS3</p>
+            </div>
+        </div>
+
+        <div class="proyecto-card">
+            <img src="/assets/img/proyecto-tuning2.jpg" alt="Tuning 2">
+            <div class="proyecto-overlay">
+                <h3>Kit Aerodinámico</h3>
+                <p>Bodykit completo + alerón carbono BMW M4</p>
+            </div>
+        </div>
+        <div class="proyecto-card">
+            <img src="/assets/img/proyecto-tuning3.jpg" alt="Tuning 3">
+            <div class="proyecto-overlay">
+                <h3>Sistema de Escape</h3>
+                <p>Escape deportivo + válvulas activas</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+        <!-- Slider Restauración -->
+        <div class="galeria-slider" id="restauracion">
+            <div class="slider-wrapper">
+                <div class="proyecto-card">
+                    <img src="/assets/img/proyecto-restauracion1.jpg" alt="Restauración 1">
+                    <div class="proyecto-overlay">
+                        <h3>Mustang 1967</h3>
+                        <p>Restauración completa motor V8 289</p>
+                    </div>
+                </div>
+                <div class="proyecto-card">
+                    <img src="/assets/img/proyecto-restauracion2.jpg" alt="Restauración 2">
+                    <div class="proyecto-overlay">
+                        <h3>Pintura Original</h3>
+                        <p>Repintado con código de color fábrica</p>
+                    </div>
+                </div>
+                <div class="proyecto-card">
+                    <img src="/assets/img/proyecto-restauracion3.jpg" alt="Restauración 3">
+                    <div class="proyecto-overlay">
+                        <h3>Interior Clásico</h3>
+                        <p>Tapicería + tablero restaurado a original</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Reparación -->
+        <div class="galeria-slider" id="reparacion">
+            <div class="slider-wrapper">
+                <div class="proyecto-card">
+                    <img src="/assets/img/proyecto-reparacion1.jpg" alt="Reparación 1">
+                    <div class="proyecto-overlay">
+                        <h3>Motor Reconstruido</h3>
+                        <p>Overhaul completo V6 Turbo Audi</p>
+                    </div>
+                </div>
+                <div class="proyecto-card">
+                    <img src="/assets/img/proyecto-reparacion2.jpg" alt="Reparación 2">
+                    <div class="proyecto-overlay">
+                        <h3>Transmisión DSG</h3>
+                        <p>Reparación mecatrónica + embragues</p>
+                    </div>
+                </div>
+                <div class="proyecto-card">
+                    <img src="/assets/img/proyecto-reparacion3.jpg" alt="Reparación 3">
+                    <div class="proyecto-overlay">
+                        <h3>Diagnóstico Avanzado</h3>
+                        <p>Falla eléctrica resuelta en 24h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="galeria__cta">
+            <a href="galeria.html" class="btn-rojo">Ver Galería Completa</a>
+        </div>
+    </div>
+</section>
+<!-- SECCIÓN QUIÉNES SOMOS -->
+<section id="nosotros" class="nosotros">
+    <div class="nosotros__container">
+        <div class="nosotros__content">
+            <div class="nosotros__texto">
+                <h2 class="section-title">Quiénes Somos</h2>
+                
+                <div class="nosotros__bloque">
+                    <h3>Nuestra Misión</h3>
+                    <p>En AutoElite, nuestra misión es brindar servicios automotrices de excelencia, combinando experiencia técnica, pasión por los automóviles y un compromiso inquebrantable con la satisfacción del cliente. Nos dedicamos a mantener y mejorar cada vehículo que entra a nuestras instalaciones.</p>
+                </div>
+
+                <div class="nosotros__bloque">
+                    <h3>Nuestro Equipo</h3>
+                    <p>Contamos con un equipo de técnicos certificados con más de 15 años de experiencia en el sector automotriz. Cada miembro de nuestro equipo está capacitado en las últimas tecnologías y técnicas de reparación, mantenimiento y optimización vehicular.</p>
+                </div>
+
+                <div class="nosotros__bloque">
+                    <h3>Certificaciones</h3>
+                    <p>Poseemos certificaciones internacionales de los principales fabricantes automotrices y trabajamos exclusivamente con repuestos originales y de marcas reconocidas. Nuestras instalaciones cumplen con todos los estándares de seguridad y calidad del sector.</p>
+                </div>
+
+                <div class="nosotros__stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <span class="stat-numero">15+</span>
+                        <span class="stat-texto">Años de Experiencia</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+                        <span class="stat-numero">5000+</span>
+                        <span class="stat-texto">Clientes Satisfechos</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <span class="stat-numero">24/7</span>
+                        <span class="stat-texto">Asistencia Vial</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </div>
+                        <span class="stat-numero">98%</span>
+                        <span class="stat-texto">Satisfacción</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nosotros__imagen">
+                <img src="/assets/img/nosotros-taller.jpg" alt="Técnico trabajando en motor AutoElite">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SECCIÓN CONTACTO -->
+<section id="contacto" class="contacto">
+    <div class="contacto__container">
+        <h2 class="section-title">Pide tu Cita / Contacto Rápido</h2>
+        <p class="section-subtitle">Llena el formulario y nos pondremos en contacto contigo lo antes posible</p>
+        
+        <div class="contacto__content">
+            <!-- Info de Contacto -->
+            <div class="contacto__info">
+                <h3>Información de Contacto</h3>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="info-texto">
+                        <span class="info-label">Dirección</span>
+                        <p>Av. Principal #123, Zona Industrial<br>Tu Ciudad, Tu País</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="info-texto">
+                        <span class="info-label">Teléfono</span>
+                        <p>0011223344<br>Contacto Directo</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="info-texto">
+                        <span class="info-label">Email</span>
+                        <p>info@autoelite.com<br>contacto@autoelite.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div class="info-texto">
+                        <span class="info-label">Horario</span>
+                        <p>Lunes - Viernes: 8:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 2:00 PM<br>Domingos: Cerrado</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <form class="contacto__form" id="formContacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicio">Servicio de Interés</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="mantenimiento">Mantenimiento Preventivo</option>
+                        <option value="reparacion">Reparaciones Especializadas</option>
+                        <option value="diagnostico">Diagnóstico Avanzado</option>
+                        <option value="detailing">Detailing Profesional</option>
+                        <option value="tuning">Tuning & Performance</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje Breve</label>
+                    <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                </div>
+
+                <button type="submit" class="btn-rojo btn-submit">Enviar Solicitud</button>
+                <p id="contacto-mensaje-status" style="margin-top: 12px; text-align: center; font-weight: 600;"></p>
+            </form>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__grid">
+            
+            <!-- Columna 1: AutoElite Info -->
+            <div class="footer__col">
+                <h3 class="footer__logo">AutoElite</h3>
+                <p class="footer__descripcion">
+                    Tu Centro Integral de Cuidado y Optimización Automotriz.
+                </p>
+                <div class="footer__contacto">
+                    <div class="footer__contacto-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Av. Principal #123<br>Zona Industrial<br>Tu Ciudad, Tu País</span>
+                    </div>
+                    <div class="footer__contacto-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0011223344</span>
+                    </div>
+                    <div class="footer__contacto-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@autoelite.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna 2: Horarios -->
+            <div class="footer__col">
+                <h4 class="footer__titulo">Horarios de Atención</h4>
+                <div class="footer__horarios">
+                    <div class="horario-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <div>
+                            <strong>Lunes a Viernes</strong>
+                            <span>8:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="horario-item">
+                        <span class="horario-dia">Sábados</span>
+                        <span>9:00 AM - 2:00 PM</span>
+                    </div>
+                    <div class="horario-item">
+                        <span class="horario-dia">Domingos</span>
+                        <span>Cerrado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna 3: Enlaces Útiles -->
+            <div class="footer__col">
+                <h4 class="footer__titulo">Enlaces Útiles</h4>
+                <ul class="footer__links">
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Síguenos -->
+            <div class="footer__col">
+                <h4 class="footer__titulo">Síguenos</h4>
+                <p class="footer__social-texto">
+                    Mantente al día con nuestras últimas noticias y proyectos
+                </p>
+                <div class="footer__social">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer__bottom">
+            <p>© 2026 AutoElite - Grupo Sala 5. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="/js/contacto.js"></script>
+<script type="module" src="/js/auth.js"></script>
+<script src="/js/gallery.js"></script>
 </body>
 </html>

@@ -13,11 +13,14 @@ function calcularCotizacion() {
         if (checkboxes[i].checked == true) {
             // Operadores - Rúbrica: Trabaja con operadores
             var precio = parseInt(checkboxes[i].getAttribute('data-precio'));
+            var nombre = checkboxes[i].getAttribute('data-nombre'); // Nuevo: usar data-nombre
             total = total + precio; // Operador +
 
-            // Manipulación de strings y objetos
-            var nombreServicio = checkboxes[i].parentElement.textContent;
-            serviciosSeleccionados.push(nombreServicio); // Método de array
+            // Guardar objeto con nombre y precio
+            serviciosSeleccionados.push({
+                nombre: nombre,
+                precio: precio
+            });
         }
     }
 
@@ -34,15 +37,23 @@ function calcularCotizacion() {
 
     divResultado.style.display = 'block'; // Muestra el div
 
-    // Bucle para mostrar detalle
-    var htmlDetalle = "<ul>";
+    // Bucle para mostrar detalle con precios
+    var htmlDetalle = "";
     for (var j = 0; j < serviciosSeleccionados.length; j++) {
-        htmlDetalle = htmlDetalle + "<li>" + serviciosSeleccionados[j] + "</li>";
+        htmlDetalle += `
+            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #D1FAE5;">
+                <span>${serviciosSeleccionados[j].nombre}</span>
+                <strong>S/ ${serviciosSeleccionados[j].precio}</strong>
+            </div>
+        `;
     }
-    htmlDetalle = htmlDetalle + "</ul>";
 
     divDetalle.innerHTML = htmlDetalle; // innerHTML - Rúbrica: Manipula valores
-    h3Total.innerHTML = "Total a pagar: S/ " + total; // Operador + con string
+    h3Total.innerHTML = `S/ ${total}`; // Operador + con string
+
+    // Guardar en localStorage para usar en el form de contacto
+    localStorage.setItem('cotizacion_servicios', JSON.stringify(serviciosSeleccionados));
+    localStorage.setItem('cotizacion_total', total);
 }
 
 // Función para limpiar - Rúbrica: Trabaja con funciones
@@ -52,8 +63,31 @@ function limpiarCotizacion() {
         checkboxes[i].checked = false;
     }
     document.getElementById('resultado').style.display = 'none';
+
+    // Limpiar localStorage
+    localStorage.removeItem('cotizacion_servicios');
+    localStorage.removeItem('cotizacion_total');
 }
 
 // Eventos - Semana 5: addEventListener
-document.getElementById('btnCalcular').addEventListener('click', calcularCotizacion);
-document.getElementById('btnLimpiar').addEventListener('click', limpiarCotizacion);
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('btnCalcular').addEventListener('click', calcularCotizacion);
+    document.getElementById('btnLimpiar').addEventListener('click', limpiarCotizacion);
+
+    // Si viene de "Agendar Cita", pre-llenar el mensaje en index.html#contacto
+    var cotizacionGuardada = localStorage.getItem('cotizacion_servicios');
+    if (cotizacionGuardada && window.location.pathname.includes('index.html')) {
+        var servicios = JSON.parse(cotizacionGuardada);
+        var total = localStorage.getItem('cotizacion_total');
+        var mensaje = `Hola, quiero cotizar los siguientes servicios:\n\n`;
+        servicios.forEach(function(s) {
+            mensaje += `• ${s.nombre} - S/ ${s.precio}\n`;
+        });
+        mensaje += `\nTotal estimado: S/ ${total}`;
+
+        var textareaMensaje = document.getElementById('mensaje');
+        if (textareaMensaje) {
+            textareaMensaje.value = mensaje;
+        }
+    }
+});

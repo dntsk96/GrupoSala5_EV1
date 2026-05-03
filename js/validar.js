@@ -1,44 +1,83 @@
-function validarFormulario() {
-    // Obtenemos valores con getElementById - Semana 4
-    var nombre = document.getElementById('nombre').value;
-    var email = document.getElementById('email').value;
-    var telefono = document.getElementById('telefono').value;
-    var vehiculo = document.getElementById('vehiculo').value;
-    var servicio = document.getElementById('servicio').value;
-    
-    // Validación campos vacíos - Semana 3
-    if (nombre == "") {
-        alert("Error: Ingresa tu nombre completo");
-        return false;
+// calidar.js - AA3: Funciones reutilizables con condicionales y operadores lógicos
+
+/**
+ * Valida formato de email
+ * @param {string} email - Email a validar
+ * @returns {Object} { valido: boolean, error: string }
+ */
+export function validarEmail(email) {
+    if (email === "" || email.trim() === "") {
+        return { valido: false, error: "El email es obligatorio" };
     }
-    
-    if (email == "") {
-        alert("Error: Ingresa tu correo electrónico");
-        return false;
+    if (email.indexOf("@") === -1 || email.indexOf(".") === -1) {
+        return { valido: false, error: "El email no es válido" };
     }
-    
-    // Validación básica de email
-    if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
-        alert("Error: El correo electrónico no es válido");
-        return false;
+    return { valido: true };
+}
+
+/**
+ * Valida contraseña
+ * @param {string} password - Contraseña principal
+ * @param {string|null} password2 - Confirmación de contraseña
+ * @returns {Object} { valido: boolean, error: string }
+ */
+export function validarPassword(password, password2 = null) {
+    if (password === "") {
+        return { valido: false, error: "La contraseña es obligatoria" };
     }
-    
-    if (telefono == "") {
-        alert("Error: Ingresa tu teléfono");
-        return false;
+    if (password.length < 6) {
+        return { valido: false, error: "Mínimo 6 caracteres" };
     }
-    
-    if (vehiculo == "") {
-        alert("Error: Ingresa marca y modelo del vehículo");
-        return false;
+    if (password2 !== null && password !== password2) {
+        return { valido: false, error: "Las contraseñas no coinciden" };
     }
-    
-    if (servicio == "") {
-        alert("Error: Selecciona un servicio requerido");
-        return false;
+    return { valido: true };
+}
+
+/**
+ * Valida nombre completo
+ * @param {string} nombre - Nombre a validar
+ * @returns {Object} { valido: boolean, error: string }
+ */
+export function validarNombre(nombre) {
+    if (nombre === "" || nombre.trim() === "") {
+        return { valido: false, error: "El nombre es obligatorio" };
     }
-    
-    // Si todo está bien
-    alert("Solicitud enviada correctamente. Nos contactaremos con " + nombre + " pronto.");
-    return true;
+    if (nombre.trim().length < 3) {
+        return { valido: false, error: "Mínimo 3 caracteres" };
+    }
+    return { valido: true };
+}
+
+/**
+ * Muestra mensaje de error en el DOM
+ * @param {string} elementoId - ID del elemento donde mostrar
+ * @param {string} mensaje - Mensaje a mostrar
+ */
+export function mostrarError(elementoId, mensaje) {
+    const el = document.getElementById(elementoId);
+    el.textContent = mensaje;
+    el.className = 'auth-mensaje error';
+}
+
+/**
+ * Muestra mensaje de éxito en el DOM
+ * @param {string} elementoId - ID del elemento donde mostrar
+ * @param {string} mensaje - Mensaje a mostrar
+ */
+export function mostrarExito(elementoId, mensaje) {
+    const el = document.getElementById(elementoId);
+    el.textContent = mensaje;
+    el.className = 'auth-mensaje success';
+}
+
+/**
+ * Muestra mensaje informativo en el DOM
+ * @param {string} elementoId - ID del elemento donde mostrar
+ * @param {string} mensaje - Mensaje a mostrar
+ */
+export function mostrarInfo(elementoId, mensaje) {
+    const el = document.getElementById(elementoId);
+    el.textContent = mensaje;
+    el.className = 'auth-mensaje info';
 }

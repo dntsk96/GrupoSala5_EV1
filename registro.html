@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - AutoElite</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- HEADER UNIFICADO -->
+<header class="header">
+    <div class="header__container">
+        <div class="logo-wrapper">
+            <a href="index.html" class="logo">
+                <img src="/assets/img/logo1.png" alt="AutoElite" height="38">
+            </a>
+            <p class="tagline">Tu Centro Integral de Cuidado y Optimización Automotriz</p>
+        </div>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">Inicio</a></li>
+                <li><a href="servicios.html" class="nav__link">Servicios</a></li>
+                <li><a href="galeria.html" class="nav__link">Galería</a></li>
+                <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+                <li><a href="catalogo.html" class="nav__link">Catálogo</a></li>
+                <li><a href="index.html#contacto" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__actions" id="header-actions">
+            <a href="registro.html" class="btn-registro active">Registro</a>
+            <a href="index.html#contacto" class="btn-cita">Pedir Cita Online</a>
+        </div>
+    </div>
+</header>
+
+<main class="auth-page">
+    <div class="auth-container">
+        <div class="auth-box" id="auth-box">
+            <!-- TABS -->
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">
+                    <i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión
+                </button>
+                <button class="tab-btn" data-tab="registro">
+                    <i class="fa-solid fa-user-plus"></i> Registrarse
+                </button>
+            </div>
+
+            <!-- FORM LOGIN -->
+            <form id="form-login" class="auth-form active">
+                <h2>Bienvenido de nuevo</h2>
+                <p class="auth-subtitle">Ingresa a tu cuenta AutoElite</p>
+
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn-auth">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar Sesión
+                </button>
+
+                <p class="auth-mensaje" id="login-mensaje"></p>
+            </form>
+
+            <!-- FORM REGISTRO -->
+            <form id="form-registro" class="auth-form">
+                <h2>Crea tu cuenta gratis</h2>
+                <p class="auth-subtitle">Agenda citas y mira tu historial</p>
+
+                <div class="form-group">
+                    <label for="reg-nombre">Nombre completo</label>
+                    <input type="text" id="reg-nombre" placeholder="Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password">Contraseña</label>
+                    <input type="password" id="reg-password" placeholder="Mínimo 6 caracteres" minlength="6" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password2">Confirmar contraseña</label>
+                    <input type="password" id="reg-password2" placeholder="Repite tu contraseña" minlength="6" required>
+                </div>
+
+                <button type="submit" class="btn-auth">
+                    <i class="fa-solid fa-user-plus"></i> Crear cuenta
+                </button>
+
+                <p class="auth-mensaje" id="reg-mensaje"></p>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__bottom">
+            <p>© 2026 AutoElite - Grupo Sala 5 AA1. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="/js/auth.js"></script>
+<script type="module" src="/js/registro.js"></script>
+</body>
+</html>

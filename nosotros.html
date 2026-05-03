@@ -1,70 +1,298 @@
 <!DOCTYPE html>
 <html lang="es">
-    <link rel="stylesheet" href="css/style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros - AutoElite</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>AutoElite</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="precios.html">Precios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+<!-- HEADER UNIFICADO -->
+<header class="header">
+    <div class="header__container">
+        <div class="logo-wrapper">
+            <a href="index.html" class="logo">
+                <img src="/assets/img/logo1.png" alt="AutoElite" height="38">
+            </a>
+            <p class="tagline">Tu Centro Integral de Cuidado y Optimización Automotriz</p>
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">Inicio</a></li>
+                <li><a href="servicios.html" class="nav__link">Servicios</a></li>
+                <li><a href="galeria.html" class="nav__link">Galería</a></li>
+                <li><a href="nosotros.html" class="nav__link active">Nosotros</a></li>
+                <li><a href="catalogo.html" class="nav__link">Catálogo</a></li>
+                <li><a href="index.html#contacto" class="nav__link">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+        <div class="header__actions" id="header-actions"></div>
+    </div>
+</header>
 
-    <main>
-        <section>
-            <h2>Sobre AutoElite</h2>
-            <article>
-                <h3>Nuestra Historia</h3>
-                <p>Con más de 15 años de experiencia en el sector automotriz, AutoElite nació con la misión de brindar un servicio honesto y de calidad. Hemos atendido más de 5,000 vehículos.</p>
-            </article>
+<main class="nosotros-page">
+    <!-- HERO -->
+    <section class="nosotros-hero">
+        <div class="nosotros-hero__container">
+            <h1>15 Años de Pasión Automotriz</h1>
+            <p>Más de 5,000 vehículos atendidos con honestidad y calidad</p>
+        </div>
+    </section>
 
-            <article>
-                <h3>Misión</h3>
-                <p>Ofrecer soluciones automotrices confiables, usando tecnología de punta y repuestos originales para garantizar la seguridad de nuestros clientes.</p>
-            </article>
+    <!-- HISTORIA EXPANDIDA -->
+    <section class="nosotros-historia">
+        <div class="nosotros__container">
+            <div class="nosotros__content">
+                <div class="nosotros__texto">
+                    <h2 class="section-title">Nuestra Historia</h2>
+                    <p>Con más de 15 años de experiencia en el sector automotriz, AutoElite nació con la misión de brindar un servicio honesto y de calidad. Lo que empezó como un pequeño taller familiar en 2011, hoy es un centro integral de 1,500m² con tecnología de punta.</p>
+                    <p>Hemos atendido más de 5,000 vehículos, desde mantenimientos preventivos hasta restauraciones completas de autos clásicos y preparaciones de alto rendimiento. Cada proyecto nos ha enseñado algo nuevo y nos ha impulsado a seguir mejorando.</p>
+                    <p>Nuestra filosofía es simple: tratar cada vehículo como si fuera nuestro, con presupuestos transparentes y entregas en el tiempo prometido.</p>
+                </div>
+                <div class="nosotros__imagen">
+                    <img src="/assets/img/nosotros-taller.jpg" alt="Taller AutoElite">
+                    <span class="img-caption">Nuestras instalaciones en Lima</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <article>
-                <h3>Visión</h3>
-                <p>Ser el taller automotriz líder en Lima, reconocido por nuestra transparencia, calidad y atención personalizada.</p>
-            </article>
+    <!-- MISIÓN VISIÓN VALORES -->
+    <section class="nosotros-mvv">
+        <div class="nosotros__container">
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3>Nuestra Misión</h3>
+                    <p>Ofrecer soluciones automotrices confiables, usando tecnología de punta y repuestos originales para garantizar la seguridad de nuestros clientes. Cada diagnóstico es preciso y cada reparación tiene garantía de 6 meses.</p>
+                </div>
 
-            <article>
-                <h3>Valores</h3>
-                <ul>
-                    <li>Honestidad: Precios justos sin sorpresas</li>
-                    <li>Calidad: Técnicos certificados y repuestos originales</li>
-                    <li>Puntualidad: Entregamos en el tiempo prometido</li>
-                    <li>Garantía: 6 meses en todos nuestros trabajos</li>
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser el taller automotriz líder en Lima, reconocido por nuestra transparencia, calidad y atención personalizada. Queremos que AutoElite sea sinónimo de confianza en el sector automotriz peruano.</p>
+                </div>
+
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3>Nuestros Valores</h3>
+                    <ul>
+                        <li><strong>Honestidad:</strong> Precios justos sin sorpresas ni costos ocultos</li>
+                        <li><strong>Calidad:</strong> Técnicos certificados ASE y repuestos originales</li>
+                        <li><strong>Puntualidad:</strong> Entregamos en el tiempo prometido o te avisamos</li>
+                        <li><strong>Garantía:</strong> 6 meses en todos nuestros trabajos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="nosotros-equipo">
+        <div class="nosotros__container">
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <p class="section-subtitle">Técnicos certificados con más de 120 años de experiencia combinada</p>
+            
+            <div class="equipo-grid">
+                <div class="equipo-card">
+                    <img src="/assets/img/team1.jpg" alt="Dante Paulet">
+                    <h4>Dante Paulet</h4>
+                    <span class="equipo-cargo">Director Técnico - Master Tech ASE</span>
+                    <p>18 años especializado en motores europeos y tuning ECU. Certificado BMW, Audi, Mercedes.</p>
+                </div>
+
+                <div class="equipo-card">
+                    <img src="/assets/img/team2.jpg" alt="Victor Pantigoso">
+                    <h4>Victor Pantigoso</h4>
+                    <span class="equipo-cargo">Jefe de Diagnóstico - Ing. Electrónica</span>
+                    <p>Experto en sistemas eléctricos y diagnóstico avanzado. 12 años en la industria automotriz.</p>
+                </div>
+
+                <div class="equipo-card">
+                    <img src="/assets/img/team3.jpg" alt="Guillermo Paucar">
+                    <h4>Guillermo Paucar</h4>
+                    <span class="equipo-cargo">Especialista en Restauración</span>
+                    <p>25 años restaurando clásicos. Premio Nacional de Restauración 2022. Motor, chasis y carrocería.</p>
+                </div>
+
+                <div class="equipo-card">
+                    <img src="/assets/img/team4.jpg" alt="Adriana Tomiño">
+                    <h4>Adriana Tomiño</h4>
+                    <span class="equipo-cargo">Detailing Master & Atención al Cliente</span>
+                    <p>Certificada Gyeon y Ceramic Pro. +500 vehículos con coating. Líder en experiencia de cliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICACIONES -->
+    <section class="nosotros-certificaciones">
+        <div class="nosotros__container">
+            <h2 class="section-title">Certificaciones y Alianzas</h2>
+            <p class="section-subtitle">Respaldados por las marcas más importantes del sector</p>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <img src="/assets/img/cert-ase.png" alt="ASE Certified">
+                    <p>ASE Master Technician</p>
+                </div>
+                <div class="cert-item">
+                    <img src="/assets/img/cert-bosch.png" alt="Bosch">
+                    <p>Bosch Car Service</p>
+                </div>
+                <div class="cert-item">
+                    <img src="/assets/img/cert-brembo.png" alt="Brembo">
+                    <p>Brembo Expert Center</p>
+                </div>
+                <div class="cert-item">
+                    <img src="/assets/img/cert-ceramic.png" alt="Ceramic Pro">
+                    <p>Ceramic Pro Elite Dealer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="nosotros-stats-full">
+        <div class="nosotros__container">
+            <div class="stats-grid-full">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-medal"></i></div>
+                    <span class="stat-numero">15+</span>
+                    <span class="stat-texto">Años de Experiencia</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-user-group"></i></div>
+                    <span class="stat-numero">5,000+</span>
+                    <span class="stat-texto">Vehículos Atendidos</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-wrench"></i></div>
+                    <span class="stat-numero">18,000+</span>
+                    <span class="stat-texto">Servicios Realizados</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+                    <span class="stat-numero">98.7%</span>
+                    <span class="stat-texto">Satisfacción</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+                    <span class="stat-numero">24/7</span>
+                    <span class="stat-texto">Asistencia Vial</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+                    <span class="stat-numero">12</span>
+                    <span class="stat-texto">Técnicos Certificados</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="nosotros-cta">
+        <div class="nosotros__container">
+            <h3>¿Listo para experimentar la diferencia AutoElite?</h3>
+            <p>Únete a los más de 5,000 clientes que confían en nosotros</p>
+            <div class="cta-botones">
+                <a href="servicios.html" class="btn-rojo">Ver Servicios</a>
+                <a href="index.html#contacto" class="btn-secundario">Agendar Cita</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER UNIFICADO -->
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <h3 class="footer__logo">AutoElite</h3>
+                <p class="footer__descripcion">
+                    Tu Centro Integral de Cuidado y Optimización Automotriz.
+                </p>
+                <div class="footer__contacto">
+                    <div class="footer__contacto-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Av. Principal 123<br>Zona Industrial<br>Lima, Perú</span>
+                    </div>
+                    <div class="footer__contacto-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>001-122-3344</span>
+                    </div>
+                    <div class="footer__contacto-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>contacto@autoelite.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__titulo">Horarios de Atención</h4>
+                <div class="footer__horarios">
+                    <div class="horario-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <div>
+                            <strong>Lunes a Viernes</strong>
+                            <span>8:00 AM - 6:00 PM</span>
+                        </div>
+                    <div class="horario-item">
+                        <span class="horario-dia">Sábados</span>
+                        <span>9:00 AM - 2:00 PM</span>
+                    </div>
+                    <div class="horario-item">
+                        <span class="horario-dia">Domingos</span>
+                        <span>Cerrado</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__titulo">Enlaces Útiles</h4>
+                <ul class="footer__links">
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
                 </ul>
-            </article>
-        </section>
-    </main>
+            </div>
 
-    <footer>
-        <div>
-            <h3>AutoElite</h3>
-            <p>Servicio automotriz desde hace 15 años</p>
+            <div class="footer__col">
+                <h4 class="footer__titulo">Síguenos</h4>
+                <p class="footer__social-texto">
+                    Mantente al día con nuestras últimas noticias y proyectos
+                </p>
+                <div class="footer__social">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div>
-            <h4>Contacto</h4>
-            <p>Tel: 001-122-3344</p>
-            <p>Email: contacto@autoelite.com</p>
-            <p>Av. Principal 123, Lima</p>
+
+        <div class="footer__bottom">
+            <p>© 2026 AutoElite - Grupo Sala 5 AA1. Todos los derechos reservados.</p>
         </div>
-        <div>
-            <p>&copy; 2026 AutoElite - Grupo Sala 5 AA1</p>
-        </div>
-    </footer>
+    </div>
+</footer>
+
+<script type="module" src="/js/auth.js"></script>
 </body>
 </html>
